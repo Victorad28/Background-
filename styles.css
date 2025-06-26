@@ -19,7 +19,7 @@ html, body {
   width: 100vw;
   height: 100vh;
   background-color: #000;
-  background-image: url('bg.jpg'); /* Replace with actual file name */
+  background-image: url('background.jpg'); /* Replace with actual file name */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
