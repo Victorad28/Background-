@@ -2,13 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Luxury Black and Gold</title>
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      background-color: black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .background-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .background-wrapper img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 100vh;
+      width: auto;
+      transform: translate(-50%, -50%);
+      object-fit: contain;
+    }
+
+    .content {
+      z-index: 1;
+      color: white;
+      font-size: 2rem;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-  <div class="background-container">
-    <!-- You can place content here if needed -->
+  <div class="background-wrapper">
+    <img src="assets/images/background.jpg" alt="Luxury background">
+  </div>
+
+  <div class="content">
+    <!-- Optional overlay content -->
+    Welcome to Luxury Mode
   </div>
 </body>
-</html>
+      </html>
