@@ -1,77 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luxury Black & Gold Website</title>
-    <style>
-        /* ===== LUXURY BACKGROUND ===== */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            /* Black velvet background */
-            background-color: #0a0a0a;
-            
-            /* Gold texture overlay */
-            background-image: 
-                radial-gradient(circle at 75% 30%, rgba(184, 134, 11, 0.15) 0%, transparent 25%),
-                radial-gradient(circle at 25% 70%, rgba(212, 175, 55, 0.15) 0%, transparent 25%);
-            
-            min-height: 100vh;
-            color: #f5f5f5;
-            font-family: 'Arial', sans-serif;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luxury Black & Gold Site</title>
+  <style>
+    /* === GLOBAL RESET === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        /* ===== GOLD ACCENT BORDER ===== */
-        .content {
-            padding: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            position: relative;
-        }
+    /* === BODY SETUP: VELVET BLACK WITH GOLD SHIMMER === */
+    body {
+      min-height: 100vh;
+      background-color: #0a0a0a; /* Deep velvet black */
 
-        .content::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, 
-                transparent 0%, 
-                #B8860B 20%, 
-                #D4AF37 50%, 
-                #B8860B 80%, 
-                transparent 100%);
-        }
+      /* ✨ Gold shimmer using layered gradients */
+      background-image:
+        radial-gradient(circle at 30% 20%, rgba(212, 175, 55, 0.1), transparent 40%),
+        radial-gradient(circle at 70% 80%, rgba(184, 134, 11, 0.08), transparent 40%),
+        linear-gradient(135deg, rgba(255, 215, 0, 0.02) 25%, transparent 25%),
+        linear-gradient(45deg, rgba(255, 215, 0, 0.01) 25%, transparent 25%);
+      background-blend-mode: screen;
+      background-repeat: no-repeat;
+      background-size: cover;
 
-        /* ===== TEXT STYLING ===== */
-        h1 {
-            color: #D4AF37;
-            text-shadow: 0 2px 4px rgba(184, 134, 11, 0.3);
-            margin-bottom: 1rem;
-        }
+      font-family: 'Poppins', sans-serif;
+      color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
 
-        p {
-            line-height: 1.6;
-        }
+    /* === CONTAINER WITH GOLD BORDER TOP === */
+    .content {
+      background: rgba(0, 0, 0, 0.7); /* Subtle glassy black */
+      padding: 2.5rem 2rem;
+      max-width: 700px;
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 0 25px rgba(212, 175, 55, 0.2);
+      position: relative;
+      overflow: hidden;
+    }
 
-        /* ===== RESPONSIVE ADJUSTMENTS ===== */
-        @media (max-width: 768px) {
-            .content {
-                padding: 2rem 1rem;
-            }
-        }
-    </style>
+    .content::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 5px;
+      width: 100%;
+      background: linear-gradient(
+        90deg,
+        transparent 0%,
+        #B8860B 20%,
+        #FFD700 50%,
+        #B8860B 80%,
+        transparent 100%
+      );
+    }
+
+    /* === HEADINGS === */
+    h1 {
+      font-size: 2rem;
+      color: #FFD700; /* Royal gold */
+      text-align: center;
+      margin-bottom: 1rem;
+      text-shadow: 0 2px 6px rgba(255, 215, 0, 0.4);
+    }
+
+    /* === PARAGRAPH === */
+    p {
+      font-size: 1rem;
+      line-height: 1.7;
+      text-align: center;
+      color: #ccc;
+    }
+
+    /* === RESPONSIVE === */
+    @media (max-width: 768px) {
+      .content {
+        padding: 2rem 1.5rem;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="content">
-        <h1>Welcome to My Website</h1>
-        <p>This is some sample content over the luxury black and gold background.</p>
-    </div>
+  <div class="content">
+    <h1>Welcome to Vikar Luxury</h1>
+    <p>This elegant black and gold theme sets the tone for premium quality and sophistication.</p>
+  </div>
 </body>
 </html>
