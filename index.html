@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Luxury Gold on Black</title>
+  <title>Luxury Black and Gold Background</title>
   <style>
     * {
       margin: 0;
@@ -14,63 +14,85 @@
     body {
       height: 100vh;
       background-color: #000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: 'Segoe UI', sans-serif;
       overflow: hidden;
-    }
-
-    .gold-frame {
       position: relative;
-      width: 90%;
-      max-width: 800px;
-      padding: 60px 40px;
-      background: rgba(0, 0, 0, 0.7);
-      border: 3px solid gold;
-      border-radius: 20px;
-      box-shadow: 
-        0 0 20px gold,
-        inset 0 0 20px gold;
-      text-align: center;
-      color: gold;
     }
 
-    .gold-frame::before,
-    .gold-frame::after {
-      content: "";
+    /* Diagonal gold lines - decorative */
+    .gold-line {
       position: absolute;
-      border: 2px solid gold;
-      width: 80%;
-      height: 80%;
-      top: 10%;
-      left: 10%;
-      transform: rotate(45deg);
-      z-index: -1;
-      opacity: 0.2;
-      pointer-events: none;
+      width: 200%;
+      height: 3px;
+      background: linear-gradient(to right, transparent, gold, transparent);
+      opacity: 0.1;
+      animation: moveLines 10s linear infinite;
     }
 
-    .gold-frame::after {
+    .gold-line:nth-child(1) {
+      top: 10%;
+      transform: rotate(30deg);
+    }
+    .gold-line:nth-child(2) {
+      top: 30%;
+      transform: rotate(-30deg);
+    }
+    .gold-line:nth-child(3) {
+      top: 50%;
+      transform: rotate(45deg);
+    }
+    .gold-line:nth-child(4) {
+      top: 70%;
       transform: rotate(-45deg);
     }
-
-    h1 {
-      font-size: 3em;
-      letter-spacing: 2px;
-      margin-bottom: 10px;
+    .gold-line:nth-child(5) {
+      top: 90%;
+      transform: rotate(60deg);
     }
 
-    p {
-      font-size: 1.2em;
-      color: #f5c542;
+    @keyframes moveLines {
+      0% {
+        transform: translateX(-50%) rotate(var(--angle));
+      }
+      100% {
+        transform: translateX(50%) rotate(var(--angle));
+      }
     }
+
+    /* Optional: subtle gold shimmer dots */
+    .gold-dot {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: gold;
+      opacity: 0.08;
+      animation: blink 3s infinite alternate;
+    }
+
+    .gold-dot:nth-child(6) { top: 20%; left: 25%; }
+    .gold-dot:nth-child(7) { top: 45%; left: 60%; }
+    .gold-dot:nth-child(8) { top: 70%; left: 35%; }
+    .gold-dot:nth-child(9) { top: 80%; left: 80%; }
+
+    @keyframes blink {
+      0% { opacity: 0.08; }
+      100% { opacity: 0.2; }
+    }
+
   </style>
 </head>
 <body>
-  <div class="gold-frame">
-    <h1>Black & Gold</h1>
-    <p>Luxury background with golden accents</p>
-  </div>
+  <!-- Gold lines -->
+  <div class="gold-line"></div>
+  <div class="gold-line"></div>
+  <div class="gold-line"></div>
+  <div class="gold-line"></div>
+  <div class="gold-line"></div>
+
+  <!-- Gold shimmer dots -->
+  <div class="gold-dot"></div>
+  <div class="gold-dot"></div>
+  <div class="gold-dot"></div>
+  <div class="gold-dot"></div>
 </body>
 </html>
